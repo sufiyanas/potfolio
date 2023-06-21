@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/consts.dart';
+import 'package:portfolio/responsive/responsive_layout.dart';
+import 'package:portfolio/view/mainPage/responsive/desktop/d_mainpage.dart';
+import 'package:portfolio/view/mainPage/responsive/mobile/m_mainpage.dart';
+
 //import 'package:rive/rive.dart';
 
 class MainPage extends StatelessWidget {
@@ -8,19 +11,9 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-     backgroundColor: widgetBackgrountColor,
-      body: Center(
-        child: Column(
-          children: [
-            Center(
-              child: Text("Hello world",style: TextStyle(fontSize: 30),),
-            ),
-            Center(
-              child: Text("Hello world",style: TextStyle(fontFamily: "Preahvihear",fontSize: 30 , ),),
-            ),
-          ],
-        ),
-      ),
+    body: ResponsiveLayout(
+      mobileBody: MobileMainPage(),
+      desktopBody: DesktopMainpage()),
     );
   }
 }
