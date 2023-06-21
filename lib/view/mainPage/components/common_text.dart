@@ -8,9 +8,9 @@ class CommonText extends StatelessWidget {
     this.fontSize = 20,
     this.fontColor = Colors.white,
   });
-  final text;
-  final fontSize;
-  final fontColor;
+  final String text;
+  final double fontSize;
+  final Color fontColor;
   @override
   Widget build(BuildContext context) {
     return Text(
